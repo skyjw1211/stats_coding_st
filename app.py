@@ -7,7 +7,7 @@ import pandas as pd
 
 base_url = sheet_url = st.secrets["private_url"]
 
-@st.experimental_singleton
+@st.experimental_memo
 def installff():
   os.system('sbase install geckodriver')
   os.system('ln -s /home/appuser/venv/lib/python3.9/site-packages/seleniumbase/drivers/geckodriver /home/appuser/venv/bin/geckodriver')
